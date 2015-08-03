@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Frequently asked questions</title>
+</head>
+<body style="text-align: left">
+    <font face="verdana,geneva" size="2">
+        <div>
+            <strong></strong>
+            <h3>
+                <strong><span><a href="http://www.atstools.info"><span style="font-size: 10pt; font-family: Times New Roman">
+                    atstools.info home</span></a><span style="font-size: 10pt; font-family: Times New Roman">
+                        | </span><a href="http://atstools.info/ninja"><span style="font-size: 10pt; font-family: Times New Roman">
+                            ninja- ip unblocks</span></a><span style="font-size: 10pt; font-family: Times New Roman">
+                                | biscuit- bounceback parser | </span><a href="http://www.DNSstuff.com"><span style="font-size: 10pt;
+                                    font-family: Times New Roman">dnsstuff.com</span></a><span style="font-size: 10pt;
+                                        font-family: Times New Roman"> | </span><a href="http://www.Kloth.net"><span style="font-size: 10pt;
+                                            font-family: Times New Roman">kloth.net</span></a><span style="font-size: 10pt; font-family: Times New Roman">&nbsp;</span></span></strong></h3>
+            <p>
+                <a href="http://bigfoot.atstools.info"><strong>&lt;&lt;Back<span><span style="font-size: 10pt;
+                    font-family: Times New Roman"></span></span></strong></a></p>
+            <h3>
+                <strong><span style="font-size: 12pt; font-family: Times New Roman; text-decoration: underline">
+                    Frequently Asked Questions</span></strong></h3>
+            <br />
+            <span style="font-size: 12pt; font-family: Times New Roman">
+            Since our recent change in default hosting nameservers, determining which nameservers
+            to use can be confusing. ATS has developed a new tool for determining which one
+            of our nameservers should be used for a hosted domain. This tool queries all of
+            our nameservers for the SOA record of a domain. Contained is the SOA record is the
+            "Primary Name Server" field which indentifies the nameserver that has authority over
+            a domain.
+            <br />
+            <br />
+            <b>Q: When would I need to use this tool?</b><br />
+            </span>
+        </div>
+        <div>
+            <span style="font-size: 12pt; font-family: Times New Roman">
+            A: The NS dig tool should be used when a hosted domain does not resolve. A good
+            example would be when a domain is using our nameservers, but dnsstuff.com shows
+            no records for the domain. It's possible the domain is not using the server that
+            has the zone file.<br />
+            </span>
+        </div>
+        <br />
+        <div>
+            <span style="font-family: Times New Roman"><span style="font-size: 12pt">
+            <b>Q: What does AUTHORITATIVE, NON AUTHORITATIVE and NO ANSWER mean?</b><br />
+            </span></span>
+        </div>
+        <div>
+            <span style="font-size: 12pt; font-family: Times New Roman">
+            A: <strong>AUTHORITATIVE</strong>- These are the primary nameservers listed for the domain. This
+            is where the zone file lives, and where the domain is hosted. The domain should
+            be pointed at these servers.<br />
+            </span>
+        </div>
+        <br />
+        <div>
+            <span style="font-family: Times New Roman"><span style="font-size: 12pt">
+            <strong>NON AUTHORITATIVE</strong>- These server contain duplicate records of the primary nameserver.
+            While the domain could be placed here, it is always good practice to use the primary
+            nameservers.
+            <br />
+            </span></span>
+        </div>
+        <br />
+        <div>
+            <span style="font-family: Times New Roman"><span style="font-size: 12pt">
+            <strong>NO ANSWER</strong>- This server contains no zone information about the domain and should
+            not be used.<br />
+            <br />
+            Note: This list does not display the parked nameservers.</span></span></div>
+        <br />
+        <div>
+            <span style="font-family: Times New Roman"><span style="font-size: 12pt">
+            <b>Q: The domain is hosted here, but the only records that were found are on a parked server. Is something
+                wrong?</b><br />
+            </span></span>
+        </div>
+        <div>
+            <span style="font-size: 12pt; font-family: Times New Roman">
+            A: No. When hosting is setup for a domain that is on our parked server, the hosting
+            servers do not create a separate zone file on the hosting servers. If the doman is hosted here it can
+            continue to use the parked servers, but it should be moved to the default hosting
+            nameservers if there is a problem. This action will create a new zone file on the
+            hosting server.<br />
+            </span>
+        </div>
+        <br />
+        <div>
+            <span style="font-family: Times New Roman"><span style="font-size: 12pt">
+            <b>Q: What if the domain is using 3<sup>rd</sup> party nameservers? Will the NS audit
+                tool still work?</b><br />
+            </span></span>
+        </div>
+        <div>
+            <span style="font-size: 12pt; font-family: Times New Roman">
+            A: Yes. The dig tool does not depend on the domain when running queries. It will
+            scan our servers for the domain records regardless of what nameservers are currently
+            used by the domain.<br />
+            </span>
+        </div>
+        <br />
+        <div>
+            <span style="font-family: Times New Roman"><span style="font-size: 12pt">
+            <b>Q: I have several aliased domains on my hosting account. Would these use the same
+                nameservers as the primary domain?</b><br />
+            </span></span>
+        </div>
+        <span style="font-size: 12pt; font-family: Times New Roman">A: Not always. Aliased domains follow the same rules as hosting accounts, it depends on when it was set up. The dig
+            tool can be used to determine this.</span></font>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br /><center>
+    <img src="bigfootfilm_small.jpg" style="font-size: 12pt; font-family: Times New Roman" />&nbsp;</center>
+
+</body>
+</html>
