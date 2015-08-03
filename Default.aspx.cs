@@ -142,6 +142,7 @@ public partial class _Default : System.Web.UI.Page
                 lblNS2result.Font.Bold = false;
             }
 
+
             //Auth check for ns3.secureserver.net
             if (zDNS.SOAlookup(HostName, "NS3.SECURESERVER.NET").Contains("NS3.SECURESERVER.NET"))
             {
